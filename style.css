@@ -1,0 +1,174 @@
+/* Variáveis de cores */
+:root {
+    --base-color: white;
+    --base-variant: #e8e9ed;
+    --text-color: #111528;
+    --secondary-text: #232738;
+    --primary-color: #34435d;
+    --accent-color: #0071ff;
+}
+
+/*darkmode*/
+.darkmode{
+    --base-color: #070b1d;
+    --base-variant: #101425;
+    --text-color: #ffffff;
+    --secondary-text: #a4a5b8;
+    --primary-color: #3a435d;
+    --accent-color: #0071ff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-family: Poppins;
+}
+
+/* Estilo Global */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--base-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+header, section{
+    padding: 70px min(50px, 7%);
+}
+section{
+    background-color: var(--base-variant);
+}
+p{
+    margin: 10px 0 20px 0;
+    color: var(--secondary-text);
+}
+button{
+    border: none;
+    padding: .8em 2em;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 4px;
+    font: inherit;
+    text-transform: uppercase;
+    font-weight: 500;
+    cursor: pointer;
+}
+.cta-button{
+    background-color: var(--accent-color);
+    text-decoration: none;
+}
+
+#theme-switch{
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--base-variant);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+#theme-switch svg{
+    fill: var(--primary-color);
+}
+
+#theme-switch svg:last-child{
+    display: none;
+}
+
+.darkmode #theme-switch svg:first-child{
+    display: none;
+}
+
+.darkmode #theme-switch svg:last-child{
+    display: block;
+}
+
+/* Navbar */
+.navbar {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--primary-color);
+    color: var(--base-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.navbar p {
+    margin: 5px 0 0;
+    font-size: 1rem;
+    color: var(--base-variant);
+}
+
+/* Seções */
+.section {
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: var(--base-variant);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.section h2 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.section p {
+    font-size: 1rem;
+    color: var(--secondary-text);
+}
+
+/* Botão "Ouvir História" */
+.play-btn {
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: var(--accent-color);
+    color: var(--base-color);
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.play-btn:hover {
+    background-color: #005bb5; /* Tom mais escuro do azul */
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+/* Estilo para imagens nas seções */
+.section-image {
+    width: 320px; /* Tamanho fixo */
+    height: 320px; /* Tamanho fixo para manter quadrada */
+    margin-right: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra leve */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito ao passar o mouse */
+.section-image:hover {
+    transform: scale(1.1); /* Aumenta levemente o tamanho */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Aumenta a sombra */
+}
