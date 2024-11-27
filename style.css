@@ -1,22 +1,21 @@
 /* Variáveis de cores */
 :root {
-    --base-color: white;
-    --base-variant: #e8e9ed;
-    --text-color: #111528;
-    --secondary-text: #232738;
-    --primary-color: #34435d;
-    --accent-color: #0071ff;
+    --base-color: #f8f9fa; /* Fundo mais claro */
+    --base-variant: #dfe4ea; /* Variante para contraste suave */
+    --text-color: #212529; /* Texto escuro para boa legibilidade */
+    --secondary-text: #495057; /* Texto secundário menos intenso */
+    --primary-color: #343a40; /* Cinza escuro para botões e títulos */
+    --accent-color: #0d6efd; /* Azul forte para chamar atenção */
 }
 
 /*darkmode*/
 .darkmode{
-    --base-color: #070b1d;
-    --base-variant: #101425;
-    --text-color: #ffffff;
-    --secondary-text: #a4a5b8;
-    --primary-color: #3a435d;
-    --accent-color: #0071ff;
-    --footer-color: #fff;
+    --base-color: #121212; /* Preto para fundo */
+    --base-variant: #1e1e1e; /* Contraste com o fundo escuro */
+    --text-color: #e9ecef; /* Texto claro para boa leitura */
+    --secondary-text: #adb5bd; /* Texto secundário suavizado */
+    --primary-color: #495057; /* Cinza médio */
+    --accent-color: #0d6efd; /* Azul forte permanece */
 }
 
 *{
@@ -39,11 +38,10 @@ body {
 }
 
 header, section{
-    color: var(--footer-color);
     padding: 70px min(50px, 7%);
 }
 section{
-    background-color: var(--footer-color);
+    background-color: var(--base-variant);
 }
 p{
     margin: 10px 0 20px 0;
@@ -99,12 +97,43 @@ button{
 .navbar {
     text-align: center;
     padding: 20px;
-    background-color: black;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
     color: var(--base-color);
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease;
+}
+
+.navbar:hover {
+    background: linear-gradient(90deg, var(--accent-color), var(--primary-color));
+}
+
+.navbar h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    animation: pulse 3s infinite ease-in-out;
+}
+
+.navbar p {
+    margin: 5px 0 0;
+    font-size: 1.1rem;
+    color: var(--base-variant);
+}
+
+/* Animação para o título principal */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    }
+    50% {
+        transform: scale(1.05);
+        text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+    }
 }
 
 .navbar h1 {
@@ -173,14 +202,4 @@ button{
 .section-image:hover {
     transform: scale(1.1); /* Aumenta levemente o tamanho */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Aumenta a sombra */
-}
-
-
-/* Introdução */
-#apresent {
-    background-color: #515151;
-}
-
-.apresent h2{
-    color: white;
 }
