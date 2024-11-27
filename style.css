@@ -16,6 +16,7 @@
     --secondary-text: #a4a5b8;
     --primary-color: #3a435d;
     --accent-color: #0071ff;
+    --footer-color: #fff;
 }
 
 *{
@@ -38,10 +39,11 @@ body {
 }
 
 header, section{
+    color: var(--footer-color);
     padding: 70px min(50px, 7%);
 }
 section{
-    background-color: var(--base-variant);
+    background-color: var(--footer-color);
 }
 p{
     margin: 10px 0 20px 0;
@@ -97,7 +99,7 @@ button{
 .navbar {
     text-align: center;
     padding: 20px;
-    background-color: var(--primary-color);
+    background-color: black;
     color: var(--base-color);
     position: sticky;
     top: 0;
@@ -171,4 +173,14 @@ button{
 .section-image:hover {
     transform: scale(1.1); /* Aumenta levemente o tamanho */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Aumenta a sombra */
+}
+
+
+/* Introdução */
+#apresent {
+    background-color: #515151;
+}
+
+.apresent h2{
+    color: white;
 }
